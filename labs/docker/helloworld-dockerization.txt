@@ -1,5 +1,4 @@
-#Install Java 11
-#sudo add-apt-repository ppa:openjdk-r/ppa
+#Install Java 17
 sudo apt-get update
 sudo apt install openjdk-17-jdk
 
