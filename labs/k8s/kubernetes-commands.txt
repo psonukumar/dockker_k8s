@@ -53,6 +53,22 @@ kubectl run product-service --image=scart/product-service:v1 --env="REGISTRY_SER
 #List pods
 kubectl get pods
 
+#Describe pod details
+kubectl describe pods
+kubectl describe pod <pod-name>
+
+#Check pod logs
+kubectl logs pods
+kubectl logs pod <pod-name>
+
+#Connect to a container running in a pod
+kubectl exec webserver -i -t -- bash
+
+#Access the pod outside the minikube/k8s cluster
+kubectl port-forward pod/webserver 9090:80		(Allows to access only from localhost)
+kubectl port-forward --address 0.0.0.0  pod/webserver 9090:80		(Allows to access from all remote ip)
+
+
 #Create nginx deployment with manifest file
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/controllers/nginx-deployment.yaml
 

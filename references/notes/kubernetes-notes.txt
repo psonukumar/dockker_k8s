@@ -10,7 +10,7 @@ Kubernetes
 		cons
 		- Lack of management console in free version
 		- Complex usecase not fits well
-		- Locked in to docker containe
+		- Locked in to docker container
 
 
 
