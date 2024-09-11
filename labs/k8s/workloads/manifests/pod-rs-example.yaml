@@ -4,8 +4,7 @@ metadata:
   name: pod-example
   labels:
     app: nginx
-  annotations:
-    description: "nginx demo pod"
+    env: prod
 spec:
   containers:
   - name: nginx
