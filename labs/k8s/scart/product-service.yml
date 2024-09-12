@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: product-service
-        image: dockrtraining/scart-product-service:v1
+        image: dockrtraining/product-service
         ports:
         - containerPort: 8091
         env:
