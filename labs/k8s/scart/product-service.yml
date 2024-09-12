@@ -36,4 +36,4 @@ spec:
         - containerPort: 8091
         env:
         - name: REGISTRY_SERVER_HOST
-          value: 10.97.214.28      
+          value: registry-service   

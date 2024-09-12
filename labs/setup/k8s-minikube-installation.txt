@@ -54,7 +54,7 @@ STEP 9: Install conntrack util (Linux kernel's networking stack) => if get error
 		sudo apt-get install conntrack
 		
 STEP 10: Start minikube
-		sudo minikube start --vm-driver=none --alsologtostderr
+		sudo minikube start --vm-driver=none --alsologtostderr		(May not work in AWS, better proceed with STEP 10a)
 
 STEP 10a: If any error while starting Minikube with vm-driver as none or using Minikube v1.24.0 and above. Try to start Minikube after running below commands which will start with vm-driver as docker
 	sudo rm -rf /tmp/juju-mk*
@@ -62,12 +62,13 @@ STEP 10a: If any error while starting Minikube with vm-driver as none or using M
 	sudo groupadd docker
 	sudo usermod -aG docker [user] => sudo usermod -aG docker ubuntu
 	newgrp docker
-	minikube start
+	minikube start					(Starts minikube with default configuration - 2 core CPUs and 2GB Memory)
+	minikube start --memory=4096		(Starts minikube with custom configuration of 4GB Memory)
 
 STEP 11: minikube status			(Status should be running)
 STEP 12: kubectl cluster-info		(Cluster URL be shown)
 		
-STEP 13a: Start minikube dashboard and copy URL (Keep the terminal open. Optional for AWS)
+STEP 13a: Start minikube dashboard and copy URL (Keep the terminal open. Optional for AWS. Need to run first-time to enable Dashboard add-on)
 		minikube dashboard --url
 		
 STEP 13b: Enable minikube dashboard remote access (default port = 8001). Required for AWS.
