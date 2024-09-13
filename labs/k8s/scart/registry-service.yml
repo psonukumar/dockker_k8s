@@ -10,8 +10,8 @@ spec:
     app: registry-service  
   ports:
   - port: 8761
-  externalIPs:
-  - 172.17.0.103  
+#   externalIPs:
+#   - 172.17.0.103  
 ---
 apiVersion: apps/v1
 kind: Deployment
